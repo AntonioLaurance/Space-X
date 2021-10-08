@@ -39,6 +39,13 @@ vR = @(t) coefR(1).*t + coefR(2);
 fprintf('Aceleración de t 16-40 seg: %2.2f m/seg^2 \n', coefR(1));
 fprintf('Aceleración de t 16-40 seg: %2.2 g \n', coefR(1)./9.81);
 
+% Gráfica 16 - 40 segundos de posición vs. tiempo
+figure(3)
+plot(t1, v1, '*g', 'LineWidth', 2)
+title('Despegue SpaceX: v vs. t. Recta en 20 - 40 seg')
+xlabel(' Tiempo(seg) ')
+ylabel(' Velocidad (m/seg) ')
+
 
 % Ajuste parábola
 t2 = datos(35:135, 1);
@@ -48,6 +55,14 @@ coefP = polyfit(t2, v2, 2);
 % y = ax^2 + bx + c
 vP = @(t) coefP(1).*t^2 + coefP(2).*t + coefP(3); % Velocidad 
 aP = @(t) 2.*coefP(1).*t + coefP(2); % Aceleración
+
+% Gráfica 50 - 150 segundos de velocidad vs. tiempo
+figure(4)
+plot(t2, v2, 'o', 'LineWidth', 2)
+title('Despegue SpaceX: v vs. t. 50 - 150 segundos')
+xlabel(' Tiempo (seg) ')
+ylabel(' Velocidad (m/seg) ')
+
 
 aP(150)
 
