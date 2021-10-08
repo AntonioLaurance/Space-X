@@ -37,7 +37,7 @@ coefR = polyfit(t1, v1, 1); % y = ax + b
 vR = @(t) coefR(1).*t + coefR(2); 
 
 fprintf('Aceleración de t 16-40 seg: %2.2f m/seg^2 \n', coefR(1));
-fprintf('Aceleración de t 16-40 seg: %2.2 g \n', coefR(1)./9.81);
+fprintf('Aceleración de t 16-40 seg: %2.2f g \n', coefR(1)./9.81);
 
 % Gráfica 16 - 40 segundos de posición vs. tiempo
 figure(3)
