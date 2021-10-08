@@ -54,4 +54,8 @@ aP(150)
 fprintf('Aceleración en t = 150 seg: %2.2f m/seg^2 \n', aP(150));
 fprintf('Aceleración en t = 150 seg: %2.2f g \n', aP(150)/9.81);
 
+% Obtenemos ecuaciones de los ajustes 
+fprintf('Ecuación del ajuste de la recta: %2.2ft %2.2f \n', coefR(1), coefP(2));
+fprintf('Ecuación de ajuste de la parábola: %2.2ft^2 %2.2ft + %2.2f \n', coefP(1), coefP(2), coefP(3))
+
 
