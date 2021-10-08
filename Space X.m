@@ -43,7 +43,7 @@ fprintf('Aceleración de t 16-40 seg: %2.2 g \n', coefR(1)./9.81);
 % Ajuste parábola
 t2 = datos(35:135, 1);
 v2 = datos(35:135, 5);
-coefP =polyfit(t2, v2, 2);
+coefP = polyfit(t2, v2, 2);
 
 % y = ax^2 + bx + c
 vP = @(t) coefP(1).*t^2 + coefP(2).*t + coefP(3); % Velocidad 
